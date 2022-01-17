@@ -48,9 +48,13 @@ public class CollectionList {
         bookArrayList.add(book1);
         bookArrayList.add(book2);
 
+
         for(Book book : bookArrayList){
             System.out.println(book);
         }
+
+        bookArrayList.get(0).setName("Data Communication");
+        System.out.println(bookArrayList.get(0));
 
     }
 }
