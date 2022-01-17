@@ -18,21 +18,26 @@ public class CollectionList {
         for (String s : list) {
             System.out.println(s);
         }
+
+        //get and remove
         System.out.println(list.get(0));
         list.remove(1);
         System.out.println(list);
 
+        //sort
         Collections.sort(list);
         System.out.println(list);
 
         System.out.println(list.get(0));
 
+        //set
         list.set(0,"One");
         System.out.println(list);
 
         list.remove(0);
         System.out.println(list);
 
+        //Add new arraylist to existing using addAll()
         ArrayList<String> list2 = new ArrayList<String>();
         list2.add("One");
         list2.add("Two");
