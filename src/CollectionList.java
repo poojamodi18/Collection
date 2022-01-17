@@ -25,6 +25,21 @@ public class CollectionList {
         Collections.sort(list);
         System.out.println(list);
 
+        System.out.println(list.get(0));
+
+        list.set(0,"One");
+        System.out.println(list);
+
+        list.remove(0);
+        System.out.println(list);
+
+        ArrayList<String> list2 = new ArrayList<String>();
+        list2.add("One");
+        list2.add("Two");
+
+        list.addAll(list2);
+        System.out.println(list);
+
         //List with class object as value
         Book book1 = new Book(101,"Operating System","Galvin","Wiley");
         Book book2 = new Book(102,"DCN","Forouzan", "Mc Hill");
