@@ -1,6 +1,7 @@
 import pojo.Book;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -33,12 +34,21 @@ public class CollectionHashMap {
         }
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Book ID: ");
         Integer key = sc.nextInt();
         //if a map contains a mapping for the specified key.
         if(bookMap.containsKey(key)){
             System.out.println(bookMap.get(key));
         }else {
             System.out.println("NO!");
+        }
+
+        System.out.println("Linked HashMap");
+        Map<Integer,Book> linkBook = new LinkedHashMap<>();
+        linkBook.putAll(bookMap);
+        for (Map.Entry<Integer,Book> book: linkBook.entrySet()
+             ) {
+            System.out.println(book);
         }
     }
 }
