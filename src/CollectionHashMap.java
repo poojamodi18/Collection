@@ -2,6 +2,7 @@ import pojo.Book;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class CollectionHashMap {
     public static void main(String[] args) {
@@ -29,6 +30,15 @@ public class CollectionHashMap {
         for (Map.Entry<Integer,Book> book: bookMap.entrySet()) {
             Book b = book.getValue();
             System.out.println(b.getName());
+        }
+
+        Scanner sc = new Scanner(System.in);
+        Integer key = sc.nextInt();
+        //if a map contains a mapping for the specified key.
+        if(bookMap.containsKey(key)){
+            System.out.println(bookMap.get(key));
+        }else {
+            System.out.println("NO!");
         }
     }
 }
