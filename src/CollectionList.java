@@ -31,7 +31,7 @@ public class CollectionList {
         System.out.println(list.get(0));
 
         //set
-        list.set(0,"One");
+        list.set(0, "One");
         System.out.println(list);
 
         list.remove(0);
@@ -46,20 +46,21 @@ public class CollectionList {
         System.out.println(list);
 
         //List with class object as value
-        Book book1 = new Book(101,"Operating System","Galvin","Wiley");
-        Book book2 = new Book(102,"DCN","Forouzan", "Mc Hill");
+        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley");
+        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill");
 
         ArrayList<Book> bookArrayList = new ArrayList<>();
         bookArrayList.add(book1);
         bookArrayList.add(book2);
 
 
-        for(Book book : bookArrayList){
+        for (Book book : bookArrayList) {
             System.out.println(book);
         }
 
         bookArrayList.get(0).setName("Data Communication");
         System.out.println(bookArrayList.get(0));
+
 
     }
 }

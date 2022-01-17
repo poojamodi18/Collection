@@ -12,6 +12,7 @@ public class CollectionHashSet {
         set1.add("two");
         set1.add("one");
         System.out.println(set1);
+        // set1.forEach(str-> System.out.println(str));
 
         //Add values from other set using addAll()
         Set<String> set2 = new HashSet<>();
@@ -42,10 +43,10 @@ public class CollectionHashSet {
 
         bookSet.add(book3);
 
-       // System.out.println(bookSet);
+        // System.out.println(bookSet);
 
         Iterator<Book> iteratorBook = bookSet.iterator();
-        while (iteratorBook.hasNext()){
+        while (iteratorBook.hasNext()) {
             System.out.println(iteratorBook.next());
         }
 
