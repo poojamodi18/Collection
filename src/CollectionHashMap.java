@@ -23,9 +23,12 @@ public class CollectionHashMap {
         bookMap.put(book1.getId(),book1);
         bookMap.put(book2.getId(),book2);
         //System.out.println(bookMap);
+        Book b1 = bookMap.get(book1.getId());
+        b1.setName("OS");
 
-        for (Map.Entry book: bookMap.entrySet()) {
-            System.out.println(book);
+        for (Map.Entry<Integer,Book> book: bookMap.entrySet()) {
+            Book b = book.getValue();
+            System.out.println(b.getName());
         }
     }
 }
