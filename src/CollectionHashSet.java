@@ -26,7 +26,7 @@ public class CollectionHashSet {
 //            System.out.println(book);
             System.out.println(book.getName() + " " + book.getId());
 
-
+            // trying pull
         }
     }
 }
