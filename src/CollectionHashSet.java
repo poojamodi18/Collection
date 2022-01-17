@@ -1,6 +1,7 @@
 import pojo.Book;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -10,6 +11,15 @@ public class CollectionHashSet {
         set1.add("one");
         set1.add("two");
         set1.add("one");
+        System.out.println(set1);
+
+        //Add values from other set using addAll()
+        Set<String> set2 = new HashSet<>();
+        set2.add("OS");
+        set2.add("DCN");
+        System.out.println(set2);
+
+        set1.addAll(set2);
         System.out.println(set1);
 
         //Hashset with class object as value
@@ -32,7 +42,12 @@ public class CollectionHashSet {
 
         bookSet.add(book3);
 
-        System.out.println(bookSet);
+       // System.out.println(bookSet);
+
+        Iterator<Book> iteratorBook = bookSet.iterator();
+        while (iteratorBook.hasNext()){
+            System.out.println(iteratorBook.next());
+        }
 
         for (Book book : bookSet) {
 
