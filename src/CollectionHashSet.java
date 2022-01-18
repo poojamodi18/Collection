@@ -10,7 +10,7 @@ public class CollectionHashSet {
         Set<String> set1 = new HashSet<>();
         set1.add("one");
         set1.add("two");
-        set1.add("one");
+        //set1.add("one");
         System.out.println(set1);
         // set1.forEach(str-> System.out.println(str));
 
