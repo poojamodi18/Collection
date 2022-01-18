@@ -43,12 +43,12 @@ public class CollectionHashMap {
             System.out.println("NO!");
         }
 
-        System.out.println("Linked HashMap");
+        /*System.out.println("Linked HashMap");
         Map<Integer, Book> linkBook = new LinkedHashMap<>();
         linkBook.putAll(bookMap);
         for (Map.Entry<Integer, Book> book : linkBook.entrySet()
         ) {
             System.out.println(book);
-        }
+        }*/
     }
 }
