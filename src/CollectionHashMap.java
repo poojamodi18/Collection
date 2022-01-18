@@ -33,7 +33,7 @@ public class CollectionHashMap {
             System.out.println(b.getName());
         }
 
-        /*Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Book ID: ");
         Integer key = sc.nextInt();
         //if a map contains a mapping for the specified key.
@@ -41,14 +41,14 @@ public class CollectionHashMap {
             System.out.println(bookMap.get(key));
         } else {
             System.out.println("NO!");
-        }*/
+        }
 
-        /*System.out.println("Linked HashMap");
+        System.out.println("Linked HashMap");
         Map<Integer, Book> linkBook = new LinkedHashMap<>();
         linkBook.putAll(bookMap);
         for (Map.Entry<Integer, Book> book : linkBook.entrySet()
         ) {
             System.out.println(book);
-        }*/
+        }
     }
 }
