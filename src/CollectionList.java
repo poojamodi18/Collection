@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class CollectionList {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Mango");
         list.add("Apple");
         list.add("Banana");
@@ -38,7 +38,7 @@ public class CollectionList {
         System.out.println(list);
 
         //Add new arraylist to existing using addAll()
-        ArrayList<String> list2 = new ArrayList<String>();
+        ArrayList<String> list2 = new ArrayList<>();
         list2.add("One");
         list2.add("Two");
 
