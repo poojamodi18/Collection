@@ -46,8 +46,8 @@ public class CollectionList {
         System.out.println(list);
 
         //List with class object as value
-        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley");
-        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill");
+        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley",300);
+        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill",450);
 
         ArrayList<Book> bookArrayList = new ArrayList<>();
         bookArrayList.add(book1);

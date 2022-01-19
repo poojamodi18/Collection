@@ -18,8 +18,8 @@ public class CollectionHashMap {
         }
 
         //HashMap with class object as value
-        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley");
-        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill");
+        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley",150);
+        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill",450);
 
         Map<Integer, Book> bookMap = new HashMap<>();
         bookMap.put(book1.getId(), book1);

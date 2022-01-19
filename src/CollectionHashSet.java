@@ -24,8 +24,8 @@ public class CollectionHashSet {
         System.out.println(set1);
 
         //Hashset with class object as value
-        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley");
-        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill");
+        Book book1 = new Book(101, "Operating System", "Galvin", "Wiley",200);
+        Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill",500);
 
         Set<Book> bookSet = new HashSet<Book>();
         bookSet.add(book1);
@@ -40,6 +40,8 @@ public class CollectionHashSet {
         book3.setAuthor(sc.nextLine());
         System.out.print("Book Publisher:");
         book3.setPublisher(sc.nextLine());
+        System.out.print("Book Price:");
+        book3.setPrice(sc.nextInt());
 
         bookSet.add(book3);
 
