@@ -27,7 +27,7 @@ public class CollectionHashSet {
         Book book1 = new Book(101, "Operating System", "Galvin", "Wiley",200);
         Book book2 = new Book(102, "DCN", "Forouzan", "Mc Hill",500);
 
-        Set<Book> bookSet = new HashSet<Book>();
+        Set<Book> bookSet = new HashSet<>();
         bookSet.add(book1);
         bookSet.add(book2);
 
@@ -53,7 +53,6 @@ public class CollectionHashSet {
         }
 
         for (Book book : bookSet) {
-
 //          System.out.println(book);
             System.out.println(book.getName() + " " + book.getId());
 
