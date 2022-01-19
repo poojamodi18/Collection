@@ -5,7 +5,6 @@ public class Book {
     private String name,author, publisher;
 
     public Book(){}
-
     public Book(int id, String name, String author, String publisher, int price) {
         this.id = id;
         this.price = price;
