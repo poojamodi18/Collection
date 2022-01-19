@@ -6,6 +6,7 @@ public class Book {
 
     public Book(){}
     // check git commit
+    // 2nd check
     public Book(int id, String name, String author, String publisher, int price) {
         this.id = id;
         this.price = price;
