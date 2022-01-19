@@ -12,9 +12,10 @@ public class FileOperation {
             while ((i = fin.read()) != -1) {
                 System.out.print((char) i);
             }
-            FileOutputStream fout = new FileOutputStream("C:\\Users\\pooja.modi\\IdeaProjects\\text.txt",true);
-            String s = System.lineSeparator()+"Append text in file using FileOutputStream";
+            FileOutputStream fout = new FileOutputStream("C:\\Users\\pooja.modi\\IdeaProjects\\text.txt", true);
+            String s = System.lineSeparator() + "Append text in file using FileOutputStream";
             fout.write(s.getBytes());
+
             fin.close();
             fout.close();
         } catch (FileNotFoundException e) {
