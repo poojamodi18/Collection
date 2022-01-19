@@ -44,8 +44,8 @@ public class CollectionHashMap {
         }
 
         System.out.println("Linked HashMap");
-        Map<Integer, Book> linkBook = new LinkedHashMap<>();
-        linkBook.putAll(bookMap);
+        Map<Integer, Book> linkBook = new LinkedHashMap<>(bookMap);
+      //  linkBook.putAll(bookMap);
         for (Map.Entry<Integer, Book> book : linkBook.entrySet()
         ) {
             System.out.println(book);
