@@ -58,10 +58,10 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", price=" + price +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
+                ", price=" + price +
                 '}';
     }
 }
