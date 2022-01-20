@@ -1,11 +1,12 @@
 import model.Book;
+import serviceinterface.BookDataInterface;
 import serviceinterface.impl.BookData;
 
 import java.util.Scanner;
 
 public class BookDemo {
     public static void main(String[] args) {
-        BookData bookData = new BookData();
+        BookDataInterface bookData = new BookData();
 
         boolean exit = true;
         do {
