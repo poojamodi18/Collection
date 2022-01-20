@@ -4,7 +4,9 @@ public class EducationalBook extends Book {
     private String category;
     private String subject;
 
-    public EducationalBook() {}
+    public EducationalBook() {
+        System.out.println("Subclass Constructor");
+    }
 
     public EducationalBook(int id, String name, String author, String publisher, int price, String category, String subject) {
         super(id, name, author, publisher, price);

@@ -4,7 +4,9 @@ public class Book {
     private int id,price;
     private String name,author, publisher;
 
-    public Book(){}
+    public Book(){
+        System.out.println("Superclass Constructor");
+    }
     public Book(int id, String name, String author, String publisher, int price) {
         this.id = id;
         this.price = price;
