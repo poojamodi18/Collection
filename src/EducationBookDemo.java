@@ -15,7 +15,8 @@ public class EducationBookDemo {
         EducationalBook book = new EducationalBook(101, "Complete Java Reference", "Herbert",
                 "McGraw Hill", 540, "Textbook", "Java");
 
-        educationalBook.showBookDetail(book);
+        educationalBook.showBookDetail(book,EducationalBookInterface.SHOW_ALL);
+        educationalBook.showBookDetail(book,EducationalBookInterface.SHOW_NAME);
 
     }
 }

@@ -3,5 +3,7 @@ package serviceinterface;
 import model.EducationalBook;
 
 public interface EducationalBookInterface {
-    void showBookDetail(EducationalBook educationalBook);
+    int SHOW_ALL = 1;
+    int SHOW_NAME = 2;
+    void showBookDetail(EducationalBook educationalBook,int mode);
 }
