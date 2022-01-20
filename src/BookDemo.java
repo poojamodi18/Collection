@@ -9,6 +9,7 @@ public class BookDemo {
 
         boolean exit = true;
         do {
+            System.out.println();
             System.out.println("1 - Show All Book Details");
             System.out.println("2 - Show One Book details");
             System.out.println("3 - Add New Book");
