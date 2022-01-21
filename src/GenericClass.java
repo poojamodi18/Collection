@@ -87,6 +87,10 @@ class IntGen<T extends Number> {
     }
 }
 
+//Generic Method
+//Generic Constructor
+//Generic Interface
+
 public class GenericClass {
     public static void main(String[] args) {
         Gen<Integer> genObj = new Gen<>(101);
