@@ -1,3 +1,4 @@
+import model.BookCategory;
 import model.EducationalBook;
 import serviceinterface.EducationalBookInterface;
 import serviceinterface.impl.EducationalBookData;
@@ -13,7 +14,7 @@ public class EducationBookDemo {
 
         EducationalBookInterface educationalBook = new EducationalBookData();
         EducationalBook book = new EducationalBook(101, "Complete Java Reference", "Herbert",
-                "McGraw Hill", 540, "Textbook", "Java");
+                "McGraw Hill", 540, BookCategory.TEXTBOOK.getBookCategory(), "Java");
 
         educationalBook.showBookDetail(book,EducationalBookInterface.SHOW_ALL);
         educationalBook.showBookDetail(book,EducationalBookInterface.SHOW_NAME);
