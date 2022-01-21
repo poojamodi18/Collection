@@ -93,7 +93,7 @@ public class GenericClass {
         genObj.showType();
         genObj.showValue();
 
-        genObj = new Gen<Integer>(103);
+        genObj = new Gen<>(103);
         genObj.showValue();
 
         Gen<String> stringGen = new Gen<>("Generic Class");
@@ -117,7 +117,7 @@ public class GenericClass {
                         BookCategory.REFERENCE_BOOK.getBookCategory(), "Networking"));
         bookTwoGen.showType();
 
-        Integer intArray[] = {100, 200, 300, 400};
+        Integer[] intArray = {100, 200, 300, 400};
         IntGen<Integer> intGen = new IntGen<>(intArray);
         intGen.CalAverage();
 
