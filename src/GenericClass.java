@@ -1,7 +1,7 @@
 import model.Book;
 import model.BookCategory;
 import model.EducationalBook;
-
+//Generic doesn't work with primitive data types
 class Gen<T> {  // T is a type parameter
     T tObject;
 
@@ -62,7 +62,7 @@ class TwoGen<T, V> {
     }
 
 }
-
+//Bounded type generic class
 class IntGen<T extends Number> {
     T[] intObj;
 

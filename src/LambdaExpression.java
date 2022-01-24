@@ -1,19 +1,22 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Function;
 
+@FunctionalInterface
 interface NumberInterface {
     int getValue();
 }
-
+@FunctionalInterface
 interface StringInterface {
     void showString(int index);
 }
 
-//Generic Interface
+//Generic Functional Interface
+@FunctionalInterface
 interface GenInter<T> {
     T GenMethod(T t);
 }
-
+@FunctionalInterface
 interface GenArray<T, V> {
     V GenArrayMethod(T t);
 }
@@ -73,5 +76,24 @@ public class LambdaExpression {
         };
         Integer ans = arrayListManipulation.GenArrayMethod(arrayList);
         System.out.println(ans);
+
+        //in-built functional interface
+        Function<Integer,Integer> factorial = (n) ->{
+            int factAns = 1;
+            for(int i=1;i<=n;i++){
+                factAns *= i;
+            }
+            return factAns;
+        };
+        System.out.println("Factorial of 7 : "+factorial.apply(7));
+
+        Function<String,String> reverseString = (originalStr)->{
+            String reverseStr="";
+            for(int i=0;i<originalStr.length();i++){
+                reverseStr = (originalStr.charAt(i))+reverseStr;
+            }
+            return reverseStr;
+        };
+        System.out.println("Reverse of Lambda Expression : "+reverseString.apply("Lambda Expression"));
     }
 }
