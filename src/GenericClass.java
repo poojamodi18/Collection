@@ -87,15 +87,53 @@ class IntGen<T extends Number> {
     }
 }
 
-//Generic Method
-//Generic Constructor
+//Generic Constructor with non-generic class
+class GenCon {
+    double num;
+
+    <T extends Number> GenCon(T t) {
+        System.out.println("Generic Constructor with " + t + " of type " + t.getClass().getName());
+        num = t.doubleValue();
+    }
+}
+
 //Generic Interface
+interface GenInterface<T extends Comparable<T>> {
+    void showValue(T t);
+}
+
+//Implementation of generic interface
+class GenInterImpl<T extends Comparable<T>> implements GenInterface<T> {
+    @Override
+    public void showValue(T t) {
+        System.out.println("Interface Implementation value: "+t);
+
+    }
+}
 
 public class GenericClass {
+    //Generic Method
+    static <T> void genMethods(T t) {
+        System.out.println("Generic Method : " + t);
+    }
+
     public static void main(String[] args) {
+
+        //generic constructor
+        GenCon genCon = new GenCon(10);  //with int
+        GenCon genCon1 = new GenCon(10.5);   //with double
+        GenCon genCon2 = new GenCon(10.2F);  //with float
+
+        //generic interface
+        GenInterImpl genInter = new GenInterImpl();
+        genInter.showValue(9999);
+        genInter.showValue("Generic interface");
+
         Gen<Integer> genObj = new Gen<>(101);
         genObj.showType();
         genObj.showValue();
+        genMethods("with string");  //generic method with string as arg
+        genMethods(111111);  //generic method with int as arg
 
         genObj = new Gen<>(103);
         genObj.showValue();
