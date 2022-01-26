@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class StreamAPI {
     public static void main(String[] args) {
@@ -9,6 +11,14 @@ public class StreamAPI {
                     return x;  // return it back to map
                 })
                 .sum();  // perform addition of all values in map and return it to ans variable
-        System.out.print("Sum : " + ans);
+        System.out.println("Sum : " + ans);
+
+        //minimum even number
+        IntStream intStream = Arrays.stream(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9})
+                .filter(n -> {
+                    return n % 2 == 0;
+                });
+        System.out.println(intStream.min());
+
     }
 }
