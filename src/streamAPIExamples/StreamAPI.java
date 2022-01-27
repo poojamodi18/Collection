@@ -1,4 +1,7 @@
+package streamAPIExamples;
+
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -15,10 +18,17 @@ public class StreamAPI {
 
         //minimum even number
         IntStream intStream = Arrays.stream(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9})
-                .filter(n -> {
-                    return n % 2 == 0;
-                });
+                .filter(n -> n % 2 == 0);
         System.out.println(intStream.min());
+
+        int[] numbers = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        IntSummaryStatistics stats = Arrays.stream(numbers)
+                .filter(n -> n % 2 == 0).summaryStatistics();
+        System.out.println("Stats");
+        System.out.println(stats.getMax());
+        System.out.println(stats.getMin());
+        System.out.println(stats.getSum());
+        System.out.println(stats.getAverage());
 
     }
 }

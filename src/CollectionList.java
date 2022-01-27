@@ -3,6 +3,7 @@ import model.Book;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CollectionList {
     public static void main(String[] args) {
@@ -61,6 +62,12 @@ public class CollectionList {
 
         bookArrayList.get(0).setName("Data Communication");
         System.out.println(bookArrayList.get(0));
+
+        //stream
+        System.out.println("Book with price more than 350 : "+bookArrayList.stream().filter(book -> book.getPrice()>350).count());
+
+        List<Book> books = new ArrayList<>(bookArrayList.stream().filter(book -> book.getPrice()>350).collect(Collectors.toList()));
+        System.out.println(books);
 
         //remove
         List<Integer> integerList = new ArrayList<>();
