@@ -2,6 +2,8 @@ import model.Book;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CollectionList {
     public static void main(String[] args) {
@@ -42,7 +44,7 @@ public class CollectionList {
         list2.add("One");
         list2.add("Two");
 
-        list.addAll(list2);
+        System.out.println("AddAll method called : "+list.addAll(list2));
         System.out.println(list);
 
         //List with class object as value
@@ -61,6 +63,32 @@ public class CollectionList {
         bookArrayList.get(0).setName("Data Communication");
         System.out.println(bookArrayList.get(0));
 
+        //stream
+        System.out.println("Book with price more than 350 : "+bookArrayList.stream().filter(book -> book.getPrice()>350).count());
+
+        List<Book> books = new ArrayList<>(bookArrayList.stream().filter(book -> book.getPrice()>350).collect(Collectors.toList()));
+        System.out.println(books);
+
+        //remove
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(1);
+        integerList.add(2);
+        integerList.add(2);
+        integerList.add(1);
+        integerList.add(3);
+        integerList.add(1);
+        integerList.add(4);
+        integerList.add(1);
+        System.out.println("Before deleting : "+integerList);
+
+        integerList.remove(1); //removes the 2nd value (2) at index 1
+        System.out.println("After deleting index 1 : "+integerList);
+        //to remove 1st occurrence of the value 1
+        integerList.remove(Integer.valueOf(1));
+        System.out.println("After deleting value 1 : "+integerList);
+        //to remove all occurrence of the value 1
+        integerList.removeIf(n->(n.equals(1)));
+        System.out.println("After deleting all occurrence of 1 : "+integerList);
 
     }
 }

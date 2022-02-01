@@ -6,17 +6,17 @@ public class FileOperation {
     public static void main(String[] args) {
         //run in cmd
         try {
-            FileInputStream fin = new FileInputStream("C:\\Users\\pooja.modi\\IdeaProjects\\text.txt");
+            FileInputStream fIn = new FileInputStream("C:\\Users\\pooja.modi\\IdeaProjects\\text.txt");
             int i;
-            while ((i = fin.read()) != -1) {
+            while ((i = fIn.read()) != -1) {
                 System.out.print((char) i);
             }
-            FileOutputStream fout = new FileOutputStream("C:\\Users\\pooja.modi\\IdeaProjects\\text.txt", true);
+            FileOutputStream fOut = new FileOutputStream("C:\\Users\\pooja.modi\\IdeaProjects\\text.txt", true);
             String s = System.lineSeparator() + "Append text in file using FileOutputStream";
-            fout.write(s.getBytes());
+            fOut.write(s.getBytes());
 
-            fin.close();
-            fout.close();
+            fIn.close();
+            fOut.close();
         }  catch (IOException e) {
             e.printStackTrace();
         }
