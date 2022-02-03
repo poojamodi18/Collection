@@ -17,12 +17,13 @@ public class PyramidPattern {
             System.out.println("Exit : 7");
             System.out.print("Enter Choice: ");
             int choice = sc.nextInt();
-            System.out.print("Enter Pattern Character : ");
-            char ch = sc.next().charAt(0);
+            char ch;
             switch (choice) {
                 case 1:
-                    for (int i = 0; i <= 5; i++) {
-                        for (int j = i; j <= 5; j++) {
+                    System.out.print("Enter Pattern Character : ");
+                    ch = sc.next().charAt(0);
+                    for (int i = 0; i < 5; i++) {
+                        for (int j = i; j < 5; j++) {
                             System.out.print(" ");
                         }
                         for (int j = 0; j < i*2+1; j++) {
@@ -32,6 +33,8 @@ public class PyramidPattern {
                     }
                     break;
                 case 2:
+                    System.out.print("Enter Pattern Character : ");
+                    ch = sc.next().charAt(0);
                     for (int i = 1; i <= 5; i++) {
                         for (int j = 0; j < i; j++) {
                             System.out.print(ch);
@@ -40,12 +43,34 @@ public class PyramidPattern {
                     }
                     break;
                 case 3:
-                    //TODO: right half pyramid
+                    System.out.print("Enter Pattern Character : ");
+                    ch = sc.next().charAt(0);
+                    for (int i = 1; i <= 5; i++) {
+                        for (int j = i; j < 5; j++) {
+                            System.out.print(" ");
+                        }
+                        for (int j = 0; j < i; j++) {
+                            System.out.print(ch);
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 4:
-                    //TODO: upside down pyramid
+                    System.out.print("Enter Pattern Character : ");
+                    ch = sc.next().charAt(0);
+                    for (int i = 5; i >= 0; i--) {
+                        for (int j = i; j < 5; j++) {
+                            System.out.print(" ");
+                        }
+                        for (int j = 0; j < i*2+1; j++) {
+                            System.out.print(ch);
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 5:
+                    System.out.print("Enter Pattern Character : ");
+                    ch = sc.next().charAt(0);
                     for (int i = 5; i >= 1; i--) {
                         for (int j = 0; j < i; j++) {
                             System.out.print(ch);
@@ -54,7 +79,17 @@ public class PyramidPattern {
                     }
                     break;
                 case 6:
-                    //TODO: upside down right pyramid
+                    System.out.print("Enter Pattern Character : ");
+                    ch = sc.next().charAt(0);
+                    for (int i = 5; i > 0; i--) {
+                        for (int j = i; j < 5; j++) {
+                            System.out.print(" ");
+                        }
+                        for (int j = 0; j < i; j++) {
+                            System.out.print(ch);
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 7:
                     exit = false;
