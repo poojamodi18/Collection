@@ -21,6 +21,7 @@ public class MatrixCalculation {
 
         System.out.println("1st Matrix value");
         matrixInput(row, col, matrix1);
+        System.out.println("2nd Matrix value");
         matrixInput(row, col, matrix2);
         System.out.println("Matrix 1");
         displayMatrix(matrix1);
@@ -45,6 +46,13 @@ public class MatrixCalculation {
 
     private static void matrixMultiplication(int row, int col, int[][] matrix1, int[][] matrix2, int[][] sum) {
         //TODO: matrix multiplication
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                for (int k = 0; k < col; k++) {
+                    sum[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+             }
+        }
     }
 
     private static void displayMatrix(int[][] matrix1) {
