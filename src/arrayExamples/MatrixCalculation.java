@@ -4,11 +4,6 @@ import java.util.Scanner;
 
 //add two matrix using multi dimensional array
 public class MatrixCalculation {
-    /*TODO : make a switch case program for matrix
-           addition
-           multiplication
-           Transpose of matrix
-     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Row : ");
@@ -45,7 +40,6 @@ public class MatrixCalculation {
     }
 
     private static void matrixMultiplication(int row, int col, int[][] matrix1, int[][] matrix2, int[][] sum) {
-        //TODO: matrix multiplication
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 for (int k = 0; k < col; k++) {

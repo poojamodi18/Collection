@@ -17,7 +17,6 @@ public class DuplicateElementList {
 
         System.out.println(name);
         Collections.sort(name);
-        System.out.println(name);
 
         for (int i = 0; i < name.size() - 1; i++) {
             if (name.get(i).equals(name.get(i + 1))) {
